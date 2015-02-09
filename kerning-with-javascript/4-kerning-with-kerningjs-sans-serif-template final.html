@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Kerning with CSS</title>
+	<!-- Add JQuery - a neat JavaScript library that allows you to do cool things -->
+    
+   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    
+	<!-- Add Kerning.js script from http://kerningjs.com/ -->
+    
+    <script src="kerning.js"></script>
+	
+	<style>
+		body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 200px;
+            line-height: 0.15em;
+            font-weight: 100;
+        }
+        
+        .yellowing {
+            -letter-kern: -0.19em 0em -0.030em -0.01em 0em 0em -0.040em -0.025em -0.040em;
+        }
+        
+        /* Layout - Ignore the code below this comment */
+        
+        figcaption {
+            border-top: 1px solid #ececec;
+            color: #ccc;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            padding-top: 20px;
+        }
+        
+        
+	</style>
+</head>
+<body>
+  
+   <figure>
+        <h1>Yellowing</h1>
+        <figcaption>Without Kerning</figcaption>
+    </figure>
+    
+    <figure>
+        <h1 class="yellowing">Yellowing</h1>
+        <figcaption>With Kerning JS</figcaption>
+    </figure>
+
+</body>
+</html>

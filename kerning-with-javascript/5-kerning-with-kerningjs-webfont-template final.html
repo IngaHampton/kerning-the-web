@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Kerning with CSS</title>
+	<!-- JQuery - a neat JavaScript library that allows you to do cool things -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    
+	<!-- Kerning.js script from http://kerningjs.com/ -->
+    
+<script src="kerning.js"></script>
+    
+	<!-- Pick a Google Font -->
+    
+<link href='http://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
+	
+	<style>
+		body {
+            font-family:'Amatic SC', cursive;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        
+        h1 {
+            font-size: 200px;
+            line-height: 0.15em;
+            font-weight: 400;
+            
+        }
+        
+        .genuphobia {
+        -letter-kern: -0.03em 0 0 0 0 0 0 0 0 0;
+        -letter-color: #f5474b 0 0 0 0 0 0 0 0 0;
+        -letter-size: 1.1em 0.8em 0.7em 0.6em 0.5em 0.5em 0.6em 0.7em 0.8em 1em;
+        }
+        
+        .description {
+        -letter-color: 0 0 0 #f5474b #f5474b #f5474b #f5474b;
+            
+        -letter-transform: none none none skew(-20deg)
+                       skew(-20deg) skew(-20deg) skew(-20deg);
+        }
+
+        
+        /* Layout - Ignore the code below this comment */
+        
+        figcaption {
+            border-top: 1px solid #ececec;
+            color: #ccc;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            padding-top: 20px;
+        }
+        
+        
+	</style>
+</head>
+<body>
+  
+   <figure>
+        <h1>Genuphobia</h1>
+       <h2>The fear of knees...</h2>
+        <figcaption>Without Kerning</figcaption>
+    </figure>
+    
+    <figure>
+        <h1 class="genuphobia">Genuphobia</h1>
+
+<h2 class="description">The fear of knees...</h2>
+        <figcaption>With Kerning JS</figcaption>
+    </figure>
+
+</body>
+</html>
